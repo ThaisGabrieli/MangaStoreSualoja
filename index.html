@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="assets/icone.png" type="image/x-icon">
+</head>
+<body>
+    <header class="container_cabecalho">
+             <img src="assets/AluraGeek.jpg" width="300px">       
+    </header>
+    
+    <main class="container_geral">
+        <!-- Sessão contéudo dos  produtos -->
+        <section class="container_produtos" >
+            <h2 class="titulo_cards">Meus Produtos:</h2>
+            <div class="card-container">
+                <div class="card-content" data-product></div>
+            </div>
+        </section>
+        
+                <!-- Sessão do formulário-->
+        <section class="container_formulario">
+            <h2>Adicionar Produtos:</h2>
+            <form class="container_form" data-form >
+                <input data-name type="text"  name="name" id="name_product" placeholder="Nome do produto.." minlength="4" required>
+                <input data-price type="number" name="price" id="price_product" placeholder="Preço do produto.." required >
+                <input type="url" data-imagem  name="image"  id="image_product" placeholder="URL do produto.." required >
+                <div class="container_button">
+                    <button type="submit" class="button_submit" id="button">Salvar</button>
+                    <button type="reset" class="button_reset" id="button" >Limpar</button> 
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container_footer">
+            <img src="assets/AluraGeek.jpg" width="300px">       
+            <p>Desenvolvido por Thais Gabrieli. Alura Latam 2024.</p>
+            <a class="link" href="https://www.flaticon.com/br/" target="_blank"><p>Site Oficial das imagens utilizadas: https://www.flaticon.com/br/</p></a>
+        </div>
+        
+    </footer>
+   
+    <script src="./js/mostraProducts.js" type="module"></script>
+    <script src="./js/criarCard.js" type="module"></script>
+    <script src="./js/validaForm.js"></script>
+</body>
+</html>
