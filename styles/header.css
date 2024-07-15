@@ -1,0 +1,10 @@
+.container_cabecalho{
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: var(--cor-secundaria); 
+    margin-bottom: 3rem;   
+}

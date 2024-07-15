@@ -1,0 +1,233 @@
+.container_produtos{
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    gap: 3rem; 
+    min-height: 60vh; 
+
+}
+
+ul, li{
+    list-style: none;
+}
+
+.container_produtos h2{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--cor-primaria);
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.subtitulo_envio{
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--cor-escura);
+}
+
+.card-container {
+    max-width: 1428px;
+    margin: 0 auto;
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 25px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    justify-content: center;  
+}
+
+
+.lista_product{
+    width: 100%;
+    max-width: 250px;
+    height: 22rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px var(--cor-escura);
+    
+}
+
+
+.card-image {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 2rem;
+    background-color: var(--cor-escura);
+    overflow: hidden; 
+    margin-bottom: -10px;
+    box-shadow: 2px 2px 10px var(--cor-escura);
+}
+
+.image-product{
+    width: 100%;
+    height: 200px;
+    z-index: 6;
+    position: relative; 
+    object-fit: fill; 
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* effect zoom */
+    cursor: pointer;
+}
+
+/* zoom */ 
+.card-image:hover .image-product {
+    transform: scale(1.2);
+}
+
+.container_card_data{
+    z-index: 2;
+    position: relative;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    overflow: hidden;
+    height: 290px;
+    
+}
+.titulo_products{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0.8rem 0.6rem;
+    color: var(--cor-escura);
+}
+
+.price_products{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    color: var(--cor-escura);
+}
+
+.container_button_delete{
+    display: inline-flex;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cor-escura);
+    backface-visibility: hidden;
+    image-rendering: auto;
+}
+
+.delete_button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.5rem 1.3rem;
+    transition: transform 0.6s cubic-bezier(0.299, 0, 0.09, 0.95);
+    box-shadow: inset 2px 2px 9px 1px rgb(181, 212, 183); 
+    
+}
+
+.delete_button:hover{
+    transform: perspective(3px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+    border-color: var(--cor-escura);
+    color: var(--cor-escura);
+    box-shadow: inset 1px 1px 3px var(--cor-escura); 
+    opacity: 0.8;  
+}
+
+.titulo_cards{
+    text-align: center;
+}   
+
+
+/*envio*/
+.container_subtitulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: end;
+    gap: 0.5rem;
+    
+}
+.subtitulo{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+/*erro */
+
+.titulo_erro{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    color: var(--cor-secundaria);
+
+}
+
+@media(width <= 1260px){
+
+    .container_card{
+        gap: 1rem;        
+    }
+
+    .container_produtos h2{
+        font-size: 32px;    
+    }
+
+ 
+        
+}
+
+@media(width <= 1044px){
+
+    .container_produtos h2{
+        font-size: 30px;
+    }
+
+    .container_card{
+        gap: 1rem;        
+    }
+
+  
+
+}
+
+@media(width <= 864px){
+
+    .container_produtos{
+        display: flex;
+        gap: 1rem;    
+    }
+
+    .container_produtos h2{
+        font-size: 29px;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 430px) {
+
+    .container_produtos{
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;        
+    }
+
+    .container_produtos h2{
+        font-size: 25px;
+        align-items: center;
+    }
+
+
+    
+
+}
+
+
+
